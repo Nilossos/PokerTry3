@@ -9,7 +9,7 @@ namespace Shaski_Bakhmut
     public class Player
     {
         public string Name { get; set; }
-        public SideType Color { get; set; }
+        public SideType Side { get; set; }
         public List<(int, int)> PossibleCaptures { get; private set; } = new List<(int, int)>();
         public bool IsInMultiCapture { get; set; } = false;
         public (int, int)? MultiCaptureStart { get; set; } = null;
@@ -17,12 +17,12 @@ namespace Shaski_Bakhmut
         public Player(string name, SideType color)
         {
             Name = name;
-            Color = color;
+            Side = color;
         }
 
         public void ChooseColor(SideType color)
         {
-            Color = color;
+            Side = color;
         }
 
         public static SideType RandomColor()
@@ -40,7 +40,7 @@ namespace Shaski_Bakhmut
         public bool MakeMove(int startRow, int startColumn, int endRow, int endColumn, Game game)
         {
             Checker piece = game.BoardPrevent[startRow, startColumn];
-            if (piece == null || piece.Color != this.Color)
+            if (piece == null || piece.Color != this.Side)
             {
                 return false;
             }
@@ -62,7 +62,7 @@ namespace Shaski_Bakhmut
             }
 
             // Проверка на обязательные взятия
-            List<(int, int)> mandatoryCaptures = game.FindPossibleCaptures(this.Color);
+            List<(int, int)> mandatoryCaptures = game.FindPossibleCaptures(this.Side);
 
             if (mandatoryCaptures.Count > 0 && !mandatoryCaptures.Contains((endRow, endColumn)))
             {
@@ -99,7 +99,7 @@ namespace Shaski_Bakhmut
                     int midColumn = (startColumn + endColumn) / 2;
                     Checker capturedPiece = game.BoardPrevent[midRow, midColumn];
 
-                    if (capturedPiece != null && capturedPiece.Color != this.Color && !capturedPiece.Killed)
+                    if (capturedPiece != null && capturedPiece.Color != this.Side && !capturedPiece.Killed)
                     {
                         isMoveValid = true;
                         isCaptureMove = true;
@@ -142,7 +142,7 @@ namespace Shaski_Bakhmut
                         Checker checkPiece = game.BoardPrevent[checkRow, checkCol];
                         if (checkPiece != null)
                         {
-                            if (checkPiece.Color != this.Color && !captureMove && !checkPiece.Killed)
+                            if (checkPiece.Color != this.Side && !captureMove && !checkPiece.Killed)
                             {
                                 captureMove = true;
                                 captureRow = checkRow;

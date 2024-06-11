@@ -71,7 +71,7 @@ namespace Shaski_Bakhmut
         {
             Players.Add(player1);
             Players.Add(player2);
-            if (player1.Color == SideType.White) { CurrentPlayer = player1; }
+            if (player1.Side == SideType.White) { CurrentPlayer = player1; }
             else CurrentPlayer = player2;
         }
 
@@ -132,7 +132,7 @@ namespace Shaski_Bakhmut
             List<(int, int)> possibleTurns = new List<(int, int)>();
             Checker piece = BoardPrevent[startRow, startColumn];
 
-            if (piece == null || piece.Color != CurrentPlayer.Color)
+            if (piece == null || piece.Color != CurrentPlayer.Side)
             {
                 return possibleTurns;
             }

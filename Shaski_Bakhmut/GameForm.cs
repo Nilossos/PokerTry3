@@ -63,12 +63,12 @@ namespace Shaski_Bakhmut
 
             if (whiteCount == 0)
             {
-                if (game.Players[0].Color == SideType.White) game.Winner = game.Players[1];
+                if (game.Players[0].Side == SideType.White) game.Winner = game.Players[1];
                 else game.Winner = game.Players[0];
             }
             else if (blackCount == 0)
             {
-                if (game.Players[0].Color == SideType.White) game.Winner = game.Players[0];
+                if (game.Players[0].Side == SideType.White) game.Winner = game.Players[0];
                 else game.Winner = game.Players[1];
             }
             else
@@ -79,7 +79,7 @@ namespace Shaski_Bakhmut
                     for (int j = 0; j < 8; j++)
                     {
                         Checker piece = game.BoardPrevent[i, j];
-                        if (piece != null && piece.Color == game.CurrentPlayer.Color)
+                        if (piece != null && piece.Color == game.CurrentPlayer.Side)
                         {
                             var moves = game.FindPossibleTurns(i, j);
                             if (moves.Count > 0)
@@ -94,7 +94,7 @@ namespace Shaski_Bakhmut
 
                 if (!hasPossibleMoves)
                 {
-                    if (game.CurrentPlayer.Color == SideType.White)
+                    if (game.CurrentPlayer.Side == SideType.White)
                     {
                         game.Winner = game.Players[1];
                     }
@@ -236,7 +236,7 @@ namespace Shaski_Bakhmut
         }
         private void InitializePlayerLabels()
         {
-            if (game.Players[0].Color == SideType.White)
+            if (game.Players[0].Side == SideType.White)
             {
                 player1Label = new Label
                 {
@@ -310,7 +310,7 @@ namespace Shaski_Bakhmut
             if (selectedRow == null || selectedColumn == null)
             {
                 Checker piece = game.BoardPrevent[row, col];
-                if (piece != null && piece.Color == game.CurrentPlayer.Color)
+                if (piece != null && piece.Color == game.CurrentPlayer.Side)
                 {
                     selectedRow = row;
                     selectedColumn = col;
@@ -454,38 +454,38 @@ namespace Shaski_Bakhmut
 
             for (int i = 0; i < game.Board.Length; i++)
             {
-                Brush brush = (i + j) % 2 == 0 ? whiteBrush : blackBrush;
+                Brush brush = (i) % 2 == 0 ? whiteBrush : blackBrush;
                 g.FillRectangle(brush, j * cellSize + offsetX, i * cellSize + offsetY, cellSize, cellSize);
 
-                Checker piece = game.BoardPrevent[i, j];
-                Checker checker = game.Checkers.FirstOrDefault(p => p.Coordinate.Equals(game.Board[]));
+                //Checker piece = game.BoardPrevent[i, j];
+                Checker checker = game.Checkers.FirstOrDefault(p => p.Coordinate.Equals(game.Board[i]));
 
-                if (piece != null)
+                if (checker != null)
                 {
-                    Brush pieceBrush = piece.Color == SideType.White ? whitePieceBrush : blackPieceBrush;
-                    g.FillEllipse(pieceBrush, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+                    Brush pieceBrush = checker.Player.Type == SideType.White ? whitePieceBrush : blackPieceBrush;
+                    g.FillEllipse(pieceBrush, cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
 
-                    if (piece.Color == SideType.Black)
+                    if (checker.Color == SideType.Black)
                     {
-                        g.DrawEllipse(blackPieceBorderPen, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+                        g.DrawEllipse(blackPieceBorderPen, cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
                     }
 
-                    if (piece.Type == CheckerType.Lady)
+                    if (checker.Type == CheckerType.Lady)
                     {
-                        if (piece.Color == SideType.White)
+                        if (checker.Color == SideType.White)
                         {
-                            g.DrawEllipse(blackCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
+                            g.DrawEllipse(blackCrownPen, cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
                         }
                         else
                         {
-                            g.DrawEllipse(whiteCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
+                            g.DrawEllipse(whiteCrownPen, cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
                         }
                     }
                 }
             }
 
             // Получение обязательных взятий для текущего игрока
-            List<(int, int)> mandatoryCaptures = game.FindPossibleCaptures(game.CurrentPlayer.Color);
+            List<(int, int)> mandatoryCaptures = game.FindPossibleCaptures(game.CurrentPlayer.Side);
 
             for (int i = 0; i < 8; i++)
             {
