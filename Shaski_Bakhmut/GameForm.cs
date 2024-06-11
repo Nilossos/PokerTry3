@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
 using System.Reflection;
 using System.Windows.Forms;
 
@@ -106,7 +107,7 @@ namespace Shaski_Bakhmut
 
             if (game.Winner != null)
             {
-                currentPlayerLabel.Text = $"Победитель:{game.Winner.Name}" ;
+                currentPlayerLabel.Text = $"Победитель:{game.Winner.Name}";
             }
         }
 
@@ -138,7 +139,7 @@ namespace Shaski_Bakhmut
         {
             int cellSize = 50;
             int boardSize = cellSize * 8;
-            int panelSize = boardSize + 40; 
+            int panelSize = boardSize + 40;
             int boardX = (this.ClientSize.Width - panelSize) / 2;
 
             boardPanel = new DoubleBufferedPanel
@@ -205,10 +206,10 @@ namespace Shaski_Bakhmut
         private void OfferDraw(Player player)
         {
             if (drawOffered)
-{
+            {
                 if (drawOfferingPlayer != player)
                 {
-                    game.Winner = null; 
+                    game.Winner = null;
                     currentPlayerLabel.Text = "Ничья";
                     boardPanel.MouseClick -= BoardPanel_MouseClick;
                 }
@@ -416,34 +417,68 @@ namespace Shaski_Bakhmut
             g.DrawRectangle(borderPen, offsetX, offsetY, cellSize * 8, cellSize * 8);
 
             // Отрисовка клеток и шашек
-            for (int i = 0; i < 8; i++)
+            //for (int i = 0; i < 8; i++)
+            //{
+            //    for (int j = 0; j < 8; j++)
+            //    {
+            //        Brush brush = (i + j) % 2 == 0 ? whiteBrush : blackBrush;
+            //        g.FillRectangle(brush, j * cellSize + offsetX, i * cellSize + offsetY, cellSize, cellSize);
+
+            //        Checker piece = game.BoardPrevent[i, j];
+            //        Checker checker = game.Checkers.FirstOrDefault(p => p.Coordinate.Equals(game.Board[]));
+
+            //        if (piece != null)
+            //        {
+            //            Brush pieceBrush = piece.Color == SideType.White ? whitePieceBrush : blackPieceBrush;
+            //            g.FillEllipse(pieceBrush, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+
+            //            if (piece.Color == SideType.Black)
+            //            {
+            //                g.DrawEllipse(blackPieceBorderPen, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+            //            }
+
+            //            if (piece.Type == CheckerType.Lady)
+            //            {
+            //                if (piece.Color == SideType.White)
+            //                {
+            //                    g.DrawEllipse(blackCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
+            //                }
+            //                else
+            //                {
+            //                    g.DrawEllipse(whiteCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
+            //                }
+            //            }
+            //        }
+            //    }
+            //}
+
+            for (int i = 0; i < game.Board.Length; i++)
             {
-                for (int j = 0; j < 8; j++)
+                Brush brush = (i + j) % 2 == 0 ? whiteBrush : blackBrush;
+                g.FillRectangle(brush, j * cellSize + offsetX, i * cellSize + offsetY, cellSize, cellSize);
+
+                Checker piece = game.BoardPrevent[i, j];
+                Checker checker = game.Checkers.FirstOrDefault(p => p.Coordinate.Equals(game.Board[]));
+
+                if (piece != null)
                 {
-                    Brush brush = (i + j) % 2 == 0 ? whiteBrush : blackBrush;
-                    g.FillRectangle(brush, j * cellSize + offsetX, i * cellSize + offsetY, cellSize, cellSize);
+                    Brush pieceBrush = piece.Color == SideType.White ? whitePieceBrush : blackPieceBrush;
+                    g.FillEllipse(pieceBrush, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
 
-                    Checker piece = game.BoardPrevent[i, j];
-                    if (piece != null)
+                    if (piece.Color == SideType.Black)
                     {
-                        Brush pieceBrush = piece.Color == SideType.White ? whitePieceBrush : blackPieceBrush;
-                        g.FillEllipse(pieceBrush, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+                        g.DrawEllipse(blackPieceBorderPen, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+                    }
 
-                        if (piece.Color == SideType.Black)
+                    if (piece.Type == CheckerType.Lady)
+                    {
+                        if (piece.Color == SideType.White)
                         {
-                            g.DrawEllipse(blackPieceBorderPen, j * cellSize + offsetX + 5, i * cellSize + offsetY + 5, cellSize - 10, cellSize - 10);
+                            g.DrawEllipse(blackCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
                         }
-
-                        if (piece.Type == CheckerType.Lady)
+                        else
                         {
-                            if (piece.Color == SideType.White)
-                            {
-                                g.DrawEllipse(blackCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
-                            }
-                            else
-                            {
-                                g.DrawEllipse(whiteCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
-                            }
+                            g.DrawEllipse(whiteCrownPen, j * cellSize + offsetX + 15, i * cellSize + offsetY + 15, cellSize - 30, cellSize - 30);
                         }
                     }
                 }

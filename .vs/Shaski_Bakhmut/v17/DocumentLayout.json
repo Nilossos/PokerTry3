@@ -1,0 +1,116 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Learning\\Shaski_Bakhmut\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|d:\\learning\\shaski_bakhmut\\shaski_bakhmut\\classes\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|solutionrelative:shaski_bakhmut\\classes\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|d:\\learning\\shaski_bakhmut\\shaski_bakhmut\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|solutionrelative:shaski_bakhmut\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|d:\\learning\\shaski_bakhmut\\shaski_bakhmut\\classes\\coordinate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|solutionrelative:shaski_bakhmut\\classes\\coordinate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|d:\\learning\\shaski_bakhmut\\shaski_bakhmut\\classes\\checker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|solutionrelative:shaski_bakhmut\\classes\\checker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|d:\\learning\\shaski_bakhmut\\shaski_bakhmut\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1882CCF9-B79A-4E73-9A23-B5EE99ACED3F}|Shaski_Bakhmut\\Shaski_Bakhmut.csproj|solutionrelative:shaski_bakhmut\\gameform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Checker.cs",
+              "DocumentMoniker": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\Classes\\Checker.cs",
+              "RelativeDocumentMoniker": "Shaski_Bakhmut\\Classes\\Checker.cs",
+              "ToolTip": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\Classes\\Checker.cs",
+              "RelativeToolTip": "Shaski_Bakhmut\\Classes\\Checker.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAA5wBsAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T09:51:08.347Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Coordinate.cs",
+              "DocumentMoniker": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\Classes\\Coordinate.cs",
+              "RelativeDocumentMoniker": "Shaski_Bakhmut\\Classes\\Coordinate.cs",
+              "ToolTip": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\Classes\\Coordinate.cs",
+              "RelativeToolTip": "Shaski_Bakhmut\\Classes\\Coordinate.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAxwB0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T09:48:15.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameForm.cs",
+              "DocumentMoniker": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\GameForm.cs",
+              "RelativeDocumentMoniker": "Shaski_Bakhmut\\GameForm.cs",
+              "ToolTip": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\GameForm.cs",
+              "RelativeToolTip": "Shaski_Bakhmut\\GameForm.cs",
+              "ViewState": "AQIAAJsBAAAAAAAAAAAAwKgBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T09:46:59.639Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GameForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "DocumentMoniker": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\GameForm.cs",
+              "RelativeDocumentMoniker": "Shaski_Bakhmut\\GameForm.cs",
+              "ToolTip": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\GameForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "RelativeToolTip": "Shaski_Bakhmut\\GameForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T09:46:55.889Z",
+              "EditorCaption": " [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Game.cs",
+              "DocumentMoniker": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\Classes\\Game.cs",
+              "RelativeDocumentMoniker": "Shaski_Bakhmut\\Classes\\Game.cs",
+              "ToolTip": "D:\\Learning\\Shaski_Bakhmut\\Shaski_Bakhmut\\Classes\\Game.cs",
+              "RelativeToolTip": "Shaski_Bakhmut\\Classes\\Game.cs",
+              "ViewState": "AQIAAGIAAAAAAAAAAAAlwBoAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-11T09:42:16.431Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -24,6 +24,7 @@ namespace Shaski_Bakhmut
             BoardPrevent = new Checker[8, 8];
             Players = new List<Player>();
             Moves = new List<Move>();
+            GenerateBoardPrevent();
             GenerateBoard();
         }
         public void CreatePlayer(string name)
