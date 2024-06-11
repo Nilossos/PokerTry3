@@ -1,0 +1,11 @@
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\bin\Debug\Shaski_Bakhmut.exe.config
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\bin\Debug\Shaski_Bakhmut.exe
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\bin\Debug\Shaski_Bakhmut.pdb
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.csproj.AssemblyReference.cache
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.GameForm.resources
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.Properties.Resources.resources
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.SetupForm.resources
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.csproj.GenerateResource.cache
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.csproj.CoreCompileInputs.cache
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.exe
+D:\Learning\Shaski_Bakhmut\Shaski_Bakhmut\obj\Debug\Shaski_Bakhmut.pdb
